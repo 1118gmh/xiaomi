@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>3d翻转</title>
+    <style>
+        @keyframes xuanzhuan {
+            0% {}
+            100% {
+                transform: rotateY(360deg);
+            }
+        }
+        
+        body {
+            perspective: 500px;
+        }
+        
+        .box {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            margin: 100px auto;
+            font-size: 20px;
+            color: white;
+            transform-style: preserve-3d;
+            animation: xuanzhuan 3s linear infinite;
+        }
+        
+        .gmh {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+            border-radius: 50%;
+            transform: rotateY(180deg);
+            box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+        }
+        
+        .jhm {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border-radius: 50%;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="gmh">
+            高明慧
+        </div>
+        <div class="jhm">大傻逼</div>
+    </div>
+
+</body>
+
+</html>
